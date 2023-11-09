@@ -1,20 +1,37 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        mono: ["var(--font-firacode)"],
+        line: ["var(--font-linefont)"],
+      },
+      fontWeight: {
+        normal: "500",
+        bold: "700",
+      },
+      colors: {
+        clr1: "#26233a",
+        clr2: "#6e6a86",
+        clr3: "#eb6f92",
+        clr4: "#31748f",
+        clr5: "#f6c177",
+        clr6: "#9ccfd8",
+        clr7: "#c4a7e7",
+        clrpink: "#ebbcba",
+        clr8: "#e0def4",
+        clrsurface: "#191724",
+        clrtext: "#b0aec1",
+        clrfoam: "#908caa",
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

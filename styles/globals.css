@@ -2,26 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.main-panel__ul__li a {
+  background: linear-gradient(to right, theme(colors.clrsurface),theme(colors.clrsurface)),
+    linear-gradient(to right, theme(colors.clr8), theme(colors.clr3));
+  background-size:
+    100% 0.1em,
+    0 0.1em;
+  background-position:
+    100% 100%,
+    0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.main-panel__ul__li a:hover,
+.main-panel__ul__li a:focus {
+  background-size:
+    0 0.1em,
+    100% 0.1em;
+}
+
+.neofetch-text-container {
+  display: inline-flex;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.neofetch-text-container:hover {
+  cursor: pointer;
+}
+
+.neofetch-text-container__neofetch {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.neofetch-text-container__neofetch::after {
+  content: "";
+  width: 0.75rem;
+  height: 1.5rem;
+  background: var(--clr-foam);
+  display: inline-block;
+  animation: cursor-blink 1s steps(2) infinite;
 }
+
+.neofetch-text-container__rerender {
+  display: inline;
+  color: var(--clr-2);
+  margin-left: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.neofetch-text-container:hover .neofetch-text-container__rerender {
+  opacity: 1;
+}
+
+.neofetch-text-container:hover,
+.neofetch-text-container:focus {
+  box-shadow: inset 7.25rem 0 0 0 #54b3d6;
+  color: white;
+}
+
+.neofetch-text-container:hover .neofetch-text-container__neofetch::after {
+  opacity: 0;
+}
+
