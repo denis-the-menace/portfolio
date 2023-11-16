@@ -14,7 +14,7 @@ export default function TerminalHeader({ path }: { path: string }) {
           <Image
             width={24}
             height={24}
-            className="mx-4"
+            className="mx-4 h-auto"
             src="terminal-icon.svg"
             alt="terminal-icon"
           />
@@ -22,7 +22,7 @@ export default function TerminalHeader({ path }: { path: string }) {
           <Image
             width={24}
             height={24}
-            className="mx-4"
+            className="mx-4 h-auto"
             src="markdown-icon.svg"
             alt="markdown-icon"
           />

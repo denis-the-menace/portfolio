@@ -18,10 +18,10 @@ const firaCode = Fira_Code({
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
-  // Below state is used to control visibilty of index page from
-  // _app.tsx file rather than index.tsx file.
-  const [isTerminalPromptRendered, setIsTerminalPromptRendered] =
-    useState(false);
+  let isTerminalPromptRendered = "true";
+  if(pathname === "/")
+      isTerminalPromptRendered = localStorage.getItem("neofetchAnimationPlayed") ?? "true",
+    
   return (
     <>
       <style jsx global>{`
@@ -35,7 +35,14 @@ export default function App({ Component, pageProps }: AppProps) {
         isTerminalPromptRendered={setIsTerminalPromptRendered}
       />
       <AnimatePresence mode="wait">
-        <motion.div key={router.pathname} id="router-div">
+        <motion.div
+          key={router.pathname}
+          // initial={{ opacity: 0, y: -10 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // exit={{ opacity: 0 }}
+          // transition={{ duration: 1 }}
+          id="router-div"
+        >
           {isTerminalPromptRendered ? (
             <PageWrapper>
               <Component {...pageProps} />

@@ -8,11 +8,14 @@ export default function TerminalPrompt({
   isTerminalPromptRendered: (state: boolean) => void;
 }) {
   let isHome;
+
   if (path === "") {
     isHome = true;
   } else {
     path += ".md";
+    isTerminalPromptRendered(true);
   }
+
   return (
     <div>
       <p>~</p>

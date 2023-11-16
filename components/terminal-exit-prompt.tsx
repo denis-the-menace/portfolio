@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function TerminalExitPrompt() {
   return (
@@ -10,7 +11,10 @@ export default function TerminalExitPrompt() {
     >
       <p>~</p>
       <span className="inline text-clrpink font-bold">{"> "}</span>
-      <span>exit</span>
+      <Link href={".."} className="exit-prompt-container">
+        <p className="exit-prompt-container__prompt">exit</p>
+        <p className="exit-prompt-container__rerender">Go back</p>
+      </Link>
     </motion.div>
   );
 }

@@ -53,23 +53,23 @@ const content = {
           "As a long-time user of Neovim, I have gained proficiency in the Lua programming language since it is the embedded scripting language that powers many of Neovim's customization features. Through my experience with Lua, I have developed a deeper understanding of its syntax, data structures, and control flow.",
       },
     ],
-    interests: {
-      os: [
+    interests: [
+      [
         "I am a Tux fan.",
         "Operating Systems",
         "In particular, I am drawn to Linux-based operating systems and the freedom they provide. I thoroughly enjoy trying out new distros and seeing how they differ from one another.",
       ],
-      cinema: [
+      [
         "I am a cinephile.",
         "Cinema",
         "I have always been fascinated by the direction and the cinematography of Soviet and Asian films. I am drawn to the unique styles, storytelling techniques, and cultural contexts that distinguish these regions' films.",
       ],
-      weightlifting: [
+      [
         "I am a gymrat.",
         "Weightlifting",
         "I find classic aesthetics and the focus on functional strength to be inspiring. For me, the process of setting and achieving goals through consistent training and progression is rewarding both physically and mentally.",
       ],
-    },
+    ],
   },
   TR: {
     neofetchPanel: [
@@ -125,23 +125,23 @@ const content = {
           "Neovim'i uzun süredir kullanmakta olduğumdan dolayı yeni Neovim versiyonlarının ve pluginlerinin konfigürasyonu için kullanılan Lua dilinde belirli bir yeterlilik kazandım. Lua ile olan deneyimim sayesinde söz dizimi, veri yapıları ve kontrol akışı hakkında daha derin bir anlayış geliştirdim.",
       },
     ],
-    interests: {
-      os: [
+    interests: [
+      [
         "Tux fanıyım.",
         "İşletim Sistemleri",
         "Özellikle Linux tabanlı işletim sistemleri ve sağladıkları özgürlük beni cezbediyor. Yeni distroları denemekten ve birbirleri arasındaki farkları görmekten büyük keyif alıyorum.",
       ],
-      cinema: [
+      [
         "Sinema gurusuyum.",
         "Sinema",
         "Sovyet ve Asya filmlerinin yönetmenliği ve sinematografisi beni her zaman büyülemiştir. Bu bölgelerin filmlerini birbirinden ayıran benzersiz tarzlar, hikaye anlatma teknikleri ve kültürel bağlamlar beni derinden etkiliyor.",
       ],
-      weightlifting: [
+      [
         "Gymratim.",
         "Ağırlık Kaldırma",
         "Klasik estetiği ve fonksiyonel güce odaklanmayı ilham verici buluyorum. Benim için, tutarlı antrenmanla birlikte ilerleme yoluyla hedefler belirleme ve bunlara ulaşma süreci hem fiziksel hem de zihinsel olarak ödüllendirici.",
       ],
-    },
+    ],
   },
 };
 

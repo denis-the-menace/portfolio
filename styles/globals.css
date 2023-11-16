@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .main-panel__ul__li a {
-  background: linear-gradient(to right, theme(colors.clrsurface),theme(colors.clrsurface)),
+  background: linear-gradient(
+      to right,
+      theme(colors.clrsurface),
+      theme(colors.clrsurface)
+    ),
     linear-gradient(to right, theme(colors.clr8), theme(colors.clr3));
   background-size:
     100% 0.1em,
@@ -25,7 +29,9 @@
 .neofetch-text-container {
   display: inline-flex;
   box-shadow: inset 0 0 0 0 #54b3d6;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .neofetch-text-container:hover {
@@ -75,3 +81,190 @@
   opacity: 0;
 }
 
+.about__title {
+  font-size: 3rem;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.about__h1 {
+  font-size: 5rem;
+}
+
+.about__title__name-box {
+  font-size: 6rem;
+  font-weight: var(--fw-bold);
+  height: 5rem;
+  margin-left: 4rem;
+  overflow: hidden;
+  position: relative;
+  color: var(--clr-pink);
+}
+
+.about__title__name-box::before {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  content: "";
+  height: 0.4rem;
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    var(--clr-surface),
+    rgba(255, 142, 113, 0)
+  );
+}
+
+.about__title__name-box::after {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  content: "";
+  height: 0.4rem;
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 142, 113, 0),
+    var(--clr-surface)
+  );
+}
+
+.about__title__name-box__ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  animation: scroll-up 4s ease-in-out infinite normal;
+}
+
+.about__title__name-box__ul .about__title__name-box__ul__ li {
+  opacity: 1;
+  height: 2rem;
+  list-style: none;
+}
+
+.links__icon {
+  transform: translateY(0.3rem);
+  filter: invert(0);
+  transition: filter 0.3s ease-in-out;
+}
+
+.links__icon:hover {
+  filter: invert(1);
+}
+
+.exit-prompt-container {
+  display: inline-flex;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.exit-prompt-container:hover {
+  cursor: pointer;
+}
+
+.exit-prompt-container__prompt {
+  display: inline-flex;
+  align-items: center;
+  color: var(--clr-8);
+  transition: color;
+}
+
+.exit-prompt-container__prompt::after {
+  content: "";
+  width: 0.75rem;
+  height: 1.5rem;
+  background: var(--clr-foam);
+  display: inline-block;
+  animation: cursor-blink 1s steps(2) infinite;
+}
+
+.exit-prompt-container:hover,
+.exit-prompt-container:focus {
+  box-shadow: inset 3.6rem 0 0 0 #54b3d6;
+  color: white;
+}
+
+.exit-prompt-container:hover .exit-prompt::after {
+  opacity: 0;
+}
+
+.exit-prompt-container__rerender {
+  display: inline;
+  color: var(--clr-2);
+  margin-left: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.exit-prompt-container:hover .exit-prompt-container__rerender {
+  opacity: 1;
+}
+
+.interests__li {
+  margin: 5rem 0;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.interests__img {
+  position: absolute;
+  width: 7rem;
+  z-index: -1;
+  transition: right 0.3s ease-in-out;
+}
+
+.interests__os__img {
+  right: -15%;
+  animation: 1.3s ease-in-out 0s fade;
+}
+
+.interests__cinema__img {
+  right: -14%;
+  animation: 1.5s ease-in-out 0s fade;
+}
+
+.interests__weightlifting__img {
+  right: -15%;
+  animation: 1.7s ease-in-out 0s fade;
+}
+
+.interests__li:hover .interests__img,
+.interests__li:focus .interests__img {
+  right: -6rem;
+}
+
+/* @media only screen and (max-width: 640px) { */
+/*   .interests__img { */
+/*     z-index: 0; */
+/*   } */
+/*   .interests__os__img { */
+/*     right: -20%; */
+/*   } */
+/* } */
+
+/* @media only screen and (max-width: 575px) { */
+/*   .interests__img { */
+/*     right: -23%; */
+/*   } */
+/* } */
+
+/* @media only screen and (max-width: 385px) { */
+/*   .interests__img { */
+/*     right: -35%; */
+/*   } */
+/* } */
