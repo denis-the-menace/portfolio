@@ -6,15 +6,16 @@ const content = {
       ["Skills", "JS, React, Java, C#, C..."],
       ["Interests", "Operating Systems, Cinema, Weightlifting"],
       ["Links"],
+      ["Resume", "Click for PDF"],
     ],
     about: [
-      "Hello, I am ",
+      "Hello, I'm ",
       "a computer engineering student focusing on web development.",
-      "I am experienced in developing server-side apps and making responsive websites. I am in touch with newer technology, I love doing research and trying out new software. I can create efficent solutions for you and your company.",
-    ],
-    education: [
-      "Education",
-      "I am currently a student at AYBU, pursuing a degree in Computer Engineering. I am in my third year of studies. My courses have covered a wide range of topics including programming languages, algorithms, computer architecture, artificial intelligence, and networking. Through my education, I have gained a strong foundation in theoretical concepts as well as practical skills in coding and problem-solving.",
+      "I am experienced with developing server-side apps and making responsive websites. I am in touch with newer technology, I love doing research and trying out new software.",
+      "Currently, I'm a",
+      "student at AYBU,",
+      "pursuing a degree in Computer Engineering.",
+      "I am in my third year of studies.",
     ],
     skills: [
       {

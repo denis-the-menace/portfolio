@@ -10,7 +10,7 @@ export default function NeofetchPanelLi({
   route: string;
   index: number;
 }) {
-  if (index === 4) {
+  if (index === 4)
     return (
       <motion.li
         key={index}
@@ -44,7 +44,6 @@ export default function NeofetchPanelLi({
         </div>
       </motion.li>
     );
-  }
   return (
     <motion.li
       key={index}

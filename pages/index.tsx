@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import NeofetchPanelLi from "@/components/home/neofetch-panel-li";
 
 export default function Page() {
-  const routes = ["about", "education", "skills", "interests", "link"];
+  const routes = [
+    "about",
+    "education",
+    "skills",
+    "interests",
+    "link",
+    "resume",
+  ];
 
   return (
     <motion.nav
@@ -12,7 +20,13 @@ export default function Page() {
       transition={{ duration: 1 }}
       className="flex gap-20 my-4 mr-8 ml-20"
     >
-      <div className="w-80 h-200 bg-clrpink"></div>
+      <Image
+        width={80}
+        height={200}
+        src="archlinux.svg"
+        alt="arch"
+        className="w-96 h-96"
+      />
       <div className="max-w-280 flex-col justify-center">
         <div className="flex">
           <p className="select-none text-clrpink">denis</p>
