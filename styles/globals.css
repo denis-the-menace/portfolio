@@ -206,7 +206,7 @@
 }
 
 .interests__li {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 @keyframes fade {
@@ -226,6 +226,12 @@
   width: 7rem;
   z-index: -1;
   transition: right 0.3s ease-in-out;
+}
+
+@media (max-width:1250px){
+  .interests__img{
+    width: 5rem;
+  }
 }
 
 .interests__os__img {

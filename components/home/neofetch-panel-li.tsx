@@ -1,5 +1,5 @@
+import { useLocalization } from "../localization-context";
 import Link from "next/link";
-import language from "@/public/languageContent";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -10,6 +10,7 @@ export default function NeofetchPanelLi({
   route: string;
   index: number;
 }) {
+  const language = useLocalization();
   if (index === 4)
     return (
       <motion.li

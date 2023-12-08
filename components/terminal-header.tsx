@@ -1,8 +1,9 @@
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function TerminalHeader({ path }: { path: string }) {
+  const router = useRouter();
   let isHome = false;
   if (path === "") {
     path = "terminal";
@@ -32,63 +33,51 @@ export default function TerminalHeader({ path }: { path: string }) {
         <p className="text-black font-bold">{path}</p>
       </div>
       <div className="flex ml-auto">
-        <button
-          className="inline-flex ml-2"
-          onClick={() => {
-            localStorage.setItem("language", "EN");
-            location.reload();
-          }}
-        >
+        <Link href={router.pathname} locale="en" className="inline-flex ml-2">
           en
-        </button>
-        <button
-          className="inline-flex ml-0.5"
-          onClick={() => {
-            localStorage.setItem("language", "TR");
-            location.reload();
-          }}
-        >
+        </Link>
+        <Link href={router.pathname} locale="tr" className="inline-flex ml-2">
           tr
-        </button>
+        </Link>
       </div>
     </header>
   );
 }
-      // {!isHome ? (
-      //   <AnimatePresence>
-      //     <motion.nav
-      //       initial={{ opacity: 0 }}
-      //       animate={{ opacity: 1 }}
-      //       transition={{ delay: 1 }}
-      //       exit={{ opacity: 0 }}
-      //     >
-      //       <ul className="flex ml-4 gap-4">
-      //         <li>
-      //           <Link href={"/"}>
-      //             <span>terminal</span>
-      //           </Link>
-      //         </li>
-      //         <li>
-      //           <Link href={"/about"}>
-      //             <span>about</span>
-      //           </Link>
-      //         </li>
-      //         <li>
-      //           <Link href={"/education"}>
-      //             <span>education</span>
-      //           </Link>
-      //         </li>
-      //         <li>
-      //           <Link href={"/skills"}>
-      //             <span>skills</span>
-      //           </Link>
-      //         </li>
-      //         <li>
-      //           <Link href={"/"}>
-      //             <span>links</span>
-      //           </Link>
-      //         </li>
-      //       </ul>
-      //     </motion.nav>
-      //   </AnimatePresence>
-      // ) : null}
+// {!isHome ? (
+//   <AnimatePresence>
+//     <motion.nav
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 1 }}
+//       transition={{ delay: 1 }}
+//       exit={{ opacity: 0 }}
+//     >
+//       <ul className="flex ml-4 gap-4">
+//         <li>
+//           <Link href={"/"}>
+//             <span>terminal</span>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href={"/about"}>
+//             <span>about</span>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href={"/education"}>
+//             <span>education</span>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href={"/skills"}>
+//             <span>skills</span>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href={"/"}>
+//             <span>links</span>
+//           </Link>
+//         </li>
+//       </ul>
+//     </motion.nav>
+//   </AnimatePresence>
+// ) : null}

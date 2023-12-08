@@ -5,20 +5,19 @@ import NeofetchPanelLi from "@/components/home/neofetch-panel-li";
 export default function Page() {
   const routes = [
     "about",
-    "education",
     "skills",
-    "interests",
+    "projects",
     "link",
     "resume",
   ];
 
   return (
-    <motion.nav
+    <motion.div
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -10 }}
       transition={{ duration: 1 }}
-      className="flex gap-20 my-4 mr-8 ml-20"
+      className="flex flex-col md:flex-row md:gap-20 mb-4 md:my-16 mx-8"
     >
       <Image
         width={80}
@@ -27,7 +26,7 @@ export default function Page() {
         alt="arch"
         className="w-96 h-96"
       />
-      <div className="max-w-280 flex-col justify-center">
+      <nav className="max-w-280 flex-col justify-center">
         <div className="flex">
           <p className="select-none text-clrpink">denis</p>
           <p className="select-none">@</p>
@@ -52,7 +51,7 @@ export default function Page() {
           <div className="w-11 h-13 bg-clrpink" />
           <div className="w-11 h-13 bg-clr8" />
         </div>
-      </div>
-    </motion.nav>
+      </nav>
+    </motion.div>
   );
 }

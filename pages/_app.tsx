@@ -1,4 +1,7 @@
 import "@/styles/globals.css";
+import en from "@/locales/en";
+import tr from "@/locales/tr";
+import { LocalizationProvider } from "@/components/localization-context";
 import { AnimatePresence, motion } from "framer-motion";
 import TerminalHeader from "@/components/terminal-header";
 import TerminalPrompt from "@/components/terminal-prompt";
@@ -17,13 +20,15 @@ const firaCode = Fira_Code({
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : tr;
   const pathname = router.pathname;
   // Below state is used to control visibilty of index page from
   // _app.tsx file rather than index.tsx file.
   const [isTerminalPromptRendered, setIsTerminalPromptRendered] =
     useState(false);
   return (
-    <>
+    <LocalizationProvider value={t}>
       <style jsx global>{`
         html {
           font-family: ${firaCode.style.fontFamily};
@@ -44,6 +49,6 @@ export default function App({ Component, pageProps }: AppProps) {
           ) : null}
         </motion.div>
       </AnimatePresence>
-    </>
+    </LocalizationProvider>
   );
 }

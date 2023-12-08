@@ -33,13 +33,6 @@ const config: Config = {
       zIndex: {
         "-1": "-1",
       },
-      fontSize: {
-        "5rem": "5rem",
-        "2rem": "2rem",
-      },
-      lineHeight: {
-        "5rem": "1.2"
-      },
       keyframes: {
         fadeIn: {
           "0%, 80%": { opacity: "0" },

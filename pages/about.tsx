@@ -1,52 +1,114 @@
-import languageContent from "@/public/languageContent";
-import { motion } from "framer-motion";
+import { useLocalization } from "@/components/localization-context";
+import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
-import InterestLi from "@/components/interests/interest-li";
-import { useState } from "react";
 
 export default function About() {
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const languageContent = useLocalization();
+  
+
+  //scroll ladigimda teker teker gelsin overviewdaki spanler
+  const { scrollYProgress } = useScroll();
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -10 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="flex flex-col gap-20 my-4 mr-20 ml-20 p-20 justify-center items-center"
+      className="flex flex-col gap-8 my-4 md:my-16 mx-8 md:mx-48 text-3xl p-8 border-solid border-2 rounded-3xl border-clrpink"
     >
-        <div className=""></div>
-        <div className="flex-col justify-center">
-          <div className="inline-flex flex-wrap font-bold text-8xl mb-4">
-            <h1 className="">{languageContent.about[0]}</h1>
-            <h1 className="text-clrpink">&nbsp;Denis</h1>
+      <div className="flex flex-col md:flex-row justify-between">
+        <p>DENIS(1)</p>
+        <h1>General Commands Manual</h1>
+        <p>DENIS(1)</p>
+      </div>
+      <div>
+        <h2 className="self-start font-bold text-clr4 mb-4">NAME</h2>
+        <p className="md:ml-28">Denis Gercek - web dev</p>
+      </div>
+      <div>
+        <h2 className="self-start font-bold text-clr4 mb-4">SYNOPSIS</h2>
+        <div className="md:ml-28">
+          <div className="flex-col justify-center items-center mt-4">
+            <div className="inline-flex flex-wrap font-bold text-5xl md:text-8xl mb-4">
+              <motion.h1
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, delay: 1 }}
+              >
+                {languageContent.about.synopsis[0]}&nbsp;
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, delay: 1.5 }}
+              >
+                {languageContent.about.synopsis[1]}&nbsp;
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, delay: 1.7 }}
+                className="text-clrpink"
+              >
+                {languageContent.about.synopsis[2]}
+              </motion.h1>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              {languageContent.about.synopsis[3]}
+            </h2>
+            <p className="text-2xl md:text-3xl">
+              {languageContent.about.synopsis[4]}
+            </p>
           </div>
-          <h2 className="text-5xl font-bold mb-4">
-            {languageContent.about[1]}
-          </h2>
-          <p className="text-3xl">{languageContent.about[2]}</p>
         </div>
-      <div className="self-start text-3xl">
-        <h2>{languageContent.about[3]}</h2>
-        <p className="font-bold">{languageContent.about[4]}</p>
-        <p>{languageContent.about[5]}</p>
-        <p>{languageContent.about[6]}</p>
+      </div>
+      <div>
+        <h2 className="self-start font-bold text-clr4 mb-4">OVERVIEW</h2>
+        <div className="md:ml-28">
+          <div className="self-start flex flex-col">
+            <div>
+              <span>{languageContent.about.overview[0]}</span>
+              <span className="font-bold underline decoration-clr7">
+                {languageContent.about.overview[1]}
+              </span>
+            </div>
+            <div>
+              <span>{languageContent.about.overview[2]}</span>
+              <span className="font-bold underline decoration-clr7">
+                {languageContent.about.overview[3]}
+              </span>
+            </div>
+            <div>
+              <span>{languageContent.about.overview[4]}</span>
+              <span className="font-bold underline decoration-clr7">
+                {languageContent.about.overview[5]}
+              </span>
+              <span>{languageContent.about.overview[6]}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 className="self-start font-bold text-clr4 mb-4">DESCRIPTION</h2>
+        <div className="md:ml-28">
+          <p className="font-bold text-clr5">
+            {languageContent.about.description[0]}
+          </p>
+          <p className="md:ml-28">{languageContent.about.description[1]}</p>
+          <p className="font-bold text-clr5 mt-4">
+            {languageContent.about.description[2]}
+          </p>
+          <p className="md:ml-28">{languageContent.about.description[3]}</p>
+          <p className="font-bold text-clr5 mt-4">
+            {languageContent.about.description[4]}
+          </p>
+          <p className="md:ml-28">{languageContent.about.description[5]}</p>
+        </div>
       </div>
     </motion.div>
   );
 }
-// <Image
-//   width={80}
-//   height={120}
-//   src="archlinux.svg"
-//   alt="arch"
-//   className="w-80 h-100"
-// />
-// <div className="about__title__name-box">
-//   <ul className="about__title__name-box__ul">
-//     <li className="about__title__name-box__ul__li">Denis</li>
-//     <li className="about__title__name-box__ul__li">Nazım</li>
-//     <li className="about__title__name-box__ul__li">Hikmet</li>
-//     <li className="about__title__name-box__ul__li">Denis</li>
-//   </ul>
-// </div>
