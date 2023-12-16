@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-panel__ul__li{
+  margin-bottom: 0.25rem;
+}
+
 .main-panel__ul__li a {
   background: linear-gradient(
       to right,
@@ -79,70 +83,6 @@
 
 .neofetch-text-container:hover .neofetch-text-container__neofetch::after {
   opacity: 0;
-}
-
-.about__title {
-  font-size: 3rem;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.about__h1 {
-  font-size: 5rem;
-}
-
-.about__title__name-box {
-  font-size: 6rem;
-  font-weight: var(--fw-bold);
-  height: 5rem;
-  margin-left: 4rem;
-  overflow: hidden;
-  position: relative;
-  color: var(--clr-pink);
-}
-
-.about__title__name-box::before {
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  content: "";
-  height: 0.4rem;
-  position: absolute;
-  background: linear-gradient(
-    180deg,
-    var(--clr-surface),
-    rgba(255, 142, 113, 0)
-  );
-}
-
-.about__title__name-box::after {
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-  content: "";
-  height: 0.4rem;
-  position: absolute;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 142, 113, 0),
-    var(--clr-surface)
-  );
-}
-
-.about__title__name-box__ul {
-  float: right;
-  margin: 0;
-  padding: 0;
-  animation: scroll-up 4s ease-in-out infinite normal;
-}
-
-.about__title__name-box__ul .about__title__name-box__ul__ li {
-  opacity: 1;
-  height: 2rem;
-  list-style: none;
 }
 
 .links__icon {

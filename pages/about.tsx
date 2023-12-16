@@ -1,12 +1,8 @@
 import { useLocalization } from "@/components/localization-context";
-import { motion, useScroll } from "framer-motion";
-import Image from "next/image";
+import { motion, useInView, useScroll } from "framer-motion";
 
 export default function About() {
   const languageContent = useLocalization();
-  
-
-  //scroll ladigimda teker teker gelsin overviewdaki spanler
   const { scrollYProgress } = useScroll();
 
   return (
@@ -15,7 +11,7 @@ export default function About() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="flex flex-col gap-8 my-4 md:my-16 mx-8 md:mx-48 text-3xl p-8 border-solid border-2 rounded-3xl border-clrpink"
+      className="flex flex-col gap-8 my-4 md:my-4 mx-4 md:mx-24 md:text-3xl p-8 border-2 md:border-0 rounded-3xl border-clrpink"
     >
       <div className="flex flex-col md:flex-row justify-between">
         <p>DENIS(1)</p>
@@ -23,13 +19,13 @@ export default function About() {
         <p>DENIS(1)</p>
       </div>
       <div>
-        <h2 className="self-start font-bold text-clr4 mb-4">NAME</h2>
+        <h2 className="self-start font-bold text-clr4 md:mb-4">NAME</h2>
         <p className="md:ml-28">Denis Gercek - web dev</p>
       </div>
       <div>
-        <h2 className="self-start font-bold text-clr4 mb-4">SYNOPSIS</h2>
+        <h2 className="self-start font-bold text-clr4 md:mb-4">SYNOPSIS</h2>
         <div className="md:ml-28">
-          <div className="flex-col justify-center items-center mt-4">
+          <div className="flex-col justify-center items-center md:mt-4">
             <div className="inline-flex flex-wrap font-bold text-5xl md:text-8xl mb-4">
               <motion.h1
                 initial={{ opacity: 0, y: -10 }}
@@ -57,18 +53,38 @@ export default function About() {
                 {languageContent.about.synopsis[2]}
               </motion.h1>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <motion.h2
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, delay: 2.2 }}
+              className="text-3xl md:text-5xl font-bold mb-4"
+            >
               {languageContent.about.synopsis[3]}
-            </h2>
-            <p className="text-2xl md:text-3xl">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, delay: 2.5 }}
+              className="text-2xl md:text-3xl"
+            >
               {languageContent.about.synopsis[4]}
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
       <div>
-        <h2 className="self-start font-bold text-clr4 mb-4">OVERVIEW</h2>
-        <div className="md:ml-28">
+        <h2 className="self-start font-bold text-clr4 md:mb-4">OVERVIEW</h2>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: 50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          className="md:ml-28"
+        >
           <div className="self-start flex flex-col">
             <div>
               <span>{languageContent.about.overview[0]}</span>
@@ -90,10 +106,10 @@ export default function About() {
               <span>{languageContent.about.overview[6]}</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div>
-        <h2 className="self-start font-bold text-clr4 mb-4">DESCRIPTION</h2>
+        <h2 className="self-start font-bold text-clr4 md:mb-4">DESCRIPTION</h2>
         <div className="md:ml-28">
           <p className="font-bold text-clr5">
             {languageContent.about.description[0]}

@@ -7,7 +7,7 @@ export default function Page() {
     "about",
     "skills",
     "projects",
-    "link",
+    "links",
     "resume",
   ];
 
@@ -17,7 +17,7 @@ export default function Page() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -10 }}
       transition={{ duration: 1 }}
-      className="flex flex-col md:flex-row md:gap-20 mb-4 md:my-16 mx-8"
+      className="flex flex-col md:flex-row md:gap-20 mb-4 md:my-16 mx-8 md:text-3xl"
     >
       <Image
         width={80}
@@ -33,7 +33,7 @@ export default function Page() {
           <p className="select-none text-clrpink">gercek</p>
         </div>
         <p className="select-none">-----------</p>
-        <ul className="list-none m-0 p-0">
+        <ul className="list-none">
           {routes.map((route, index) => (
             <NeofetchPanelLi key={index} route={route} index={index} />
           ))}

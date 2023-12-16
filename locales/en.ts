@@ -1,8 +1,8 @@
 const en = {
   neofetchPanel: [
     ["About", "Me"],
-    ["Skills", "JS, React, Java, C#, C..."],
-    ["Interests", "Operating Systems, Cinema, Weightlifting"],
+    ["Skills", "JavaScript, React, C, Java, C#..."],
+    ["Projects", "Web Apps, AI, Parallel Programming"],
     ["Links"],
     ["Resume", "Click for PDF"],
   ],
@@ -16,7 +16,7 @@ const en = {
     ],
     overview: [
       "Currently, I'm a ",
-      "student at AYBU",
+      "student at AYBU,",
       "pursuing a degree in ",
       "Computer Engineering.",
       "I am in my ",

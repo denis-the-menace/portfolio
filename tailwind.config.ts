@@ -26,6 +26,7 @@ const config: Config = {
         clr7: "#c4a7e7",
         clrpink: "#ebbcba",
         clr8: "#e0def4",
+        clr9: "#303030",
         clrsurface: "#191724",
         clrtext: "#b0aec1",
         clrfoam: "#908caa",

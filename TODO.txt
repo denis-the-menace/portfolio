@@ -1,1 +1,3 @@
 skills kisminda basic skills, web dev, cloud diye ayirablirisin slideshowlari
+
+exit in marginini arttir body ye de margin koyabilirsin direkt
