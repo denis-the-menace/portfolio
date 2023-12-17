@@ -149,6 +149,10 @@
   margin: 2rem 0;
 }
 
+.interests__button{
+  border-radius: 1rem;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -189,19 +193,17 @@
   animation: 1.7s ease-in-out 0s fade;
 }
 
-.interests__li:hover .interests__img,
-.interests__li:focus .interests__img {
+.interests__button:hover .interests__img,
+.interests__button:focus .interests__img {
   right: -6rem;
 }
 
-/* @media only screen and (max-width: 640px) { */
-/*   .interests__img { */
-/*     z-index: 0; */
-/*   } */
-/*   .interests__os__img { */
-/*     right: -20%; */
-/*   } */
-/* } */
+@media only screen and (max-width: 768px) {
+.interests__button:hover .interests__img,
+.interests__button:focus .interests__img {
+  right: -4rem;
+}
+}
 
 /* @media only screen and (max-width: 575px) { */
 /*   .interests__img { */

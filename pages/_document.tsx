@@ -6,7 +6,8 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body
-        className={`h-screen bg-clrsurface font-mono font-normal text-2xl text-clr8`}
+      //h-screen
+        className={`bg-clrsurface font-mono font-normal text-2xl text-clr8`}
       >
         <Main />
         <NextScript />

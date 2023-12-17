@@ -1,6 +1,7 @@
 import { useLocalization } from "@/components/localization-context";
-import { motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import Image from "next/image";
+import useMeasure from "react-use-measure";
 
 export default function SkillsLi({
   index,
@@ -18,45 +19,51 @@ export default function SkillsLi({
   onShow: () => void;
 }) {
   const languageContent = useLocalization();
-  const [ref,{height}] = useMeasure();
+  const [ref, { height }] = useMeasure();
 
   return (
-    <motion.li
-      key={isActive ? 1 : 0}
-      initial={{ height: 0 }}
-      animate={{ height: "auto" }}
-      className="interests__li"
-      onClick={onShow}
-    >
-      <button
-        className={`p-4 mr-24 relative text-2xl md:text-5xl inline-flex items-end ${color}`}
+    <MotionConfig transition={{ duration: 0.5 }}>
+      <motion.li
+        animate={{ height }}
+        className="interests__li"
+        onClick={onShow}
       >
-        {languageContent.skills[index][0]}
-        <Image
-          width={7 * 16}
-          height={7 * 16}
-          src={imageSrc}
-          alt={imageSrc}
-          className={`interests__img interests__${content}__img`}
-        />
-      </button>
-      {isActive && (
-        <motion.div
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -10 }}
-          transition={{ duration: 1 }}
-          className="inline-block justify-center items-center m-4 max-w-6xl"
+        <button
+          className={`interests__button p-4 mr-24 relative text-2xl md:text-5xl inline-flex items-end ${color}`}
         >
-          <h1 className="text-5xl font-bold">
-            {languageContent.interests[0][1]}
-          </h1>
-          <p>{languageContent.interests[0][2]}</p>
-        </motion.div>
-      )}
-    </motion.li>
+          {languageContent.skills[index][0]}
+          <Image
+            width={7 * 16}
+            height={7 * 16}
+            src={imageSrc}
+            alt={imageSrc}
+            className={`interests__img interests__${content}__img`}
+          />
+        </button>
+        {isActive && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="md:ml-40"
+          >
+            <div
+              ref={ref}
+              className="inline-block justify-center items-center m-4 max-w-6xl"
+            >
+              <h1 className="text-5xl font-bold">
+                {languageContent.interests[0][1]}
+              </h1>
+              <p>{languageContent.interests[0][2]}</p>
+            </div>
+          </motion.div>
+        )}
+      </motion.li>
+    </MotionConfig>
   );
 }
+
 // <Image
 //   width={100}
 //   height={100}

@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${firaCode.style.fontFamily};
         }
       `}</style>
-      <TerminalHeader path={pathname.replace("/", "")} />
+        <TerminalHeader pathname={pathname} />
       <TerminalPrompt
         path={pathname.replace("/", "")}
         isTerminalPromptRendered={setIsTerminalPromptRendered}
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
           {isTerminalPromptRendered ? (
             <PageWrapper>
               <Component {...pageProps} />
-              <TerminalExitPrompt />
+              <TerminalExitPrompt path={pathname.replace("/", "")} />
             </PageWrapper>
           ) : null}
         </motion.div>

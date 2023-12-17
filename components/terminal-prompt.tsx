@@ -9,15 +9,15 @@ export default function TerminalPrompt({
 }) {
   let isHome;
 
-  if (path === "") {
-    isHome = true;
-  } else {
-    path += ".md";
-    isTerminalPromptRendered(true);
-  }
+  if (path === "") isHome = true;
+  else isTerminalPromptRendered(true);
+
+  if (path === "about") path = "man denis";
+  else if (path === "skills") path += ".md";
+  else if (path === "projects") path = "cd projects && fzf";
 
   return (
-    <div>
+    <div className="mt-4">
       <p>~</p>
       <span className="inline text-clrpink font-bold">{"> "}</span>
       {isHome ? (

@@ -1,12 +1,10 @@
-import { useLocalization } from "@/components/localization-context";
 import ProjectCard from "@/components/projects/project-card";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Projects() {
-  const languageContent = useLocalization();
   const [isMobile, setIsMobile] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
