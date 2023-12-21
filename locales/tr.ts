@@ -1,20 +1,36 @@
 const tr = {
   neofetchPanel: [
-    ["Hakkımda", "test"],
-    ["Beceriler", "JS, React, Java, C#, C..."],
-    ["İlgi Alanları", "İşletim Sistemleri, Sinema, Ağırlık Kaldırmak"],
-    ["Bağlantılar"],
-    ["CV", "Click for PDF"],
+    ["Hakkımda", ""],
+    ["Beceriler:", "JS, React, Java, C#, C..."],
+    ["Projeler:", "Web Uygulamaları, Yapay Zeka, Paralel Programlama"],
+    ["CV:", "PDF için tıklayın"],
+    ["Bağlantılar:"],
   ],
-  about: [
-    "Merhaba, ben",
-    "web geliştirmeye odaklanan bir bilgisayar mühendisliği öğrencisiyim.",
-    "Sunucu bazlı uygulama gelistirmekte ve responsive web siteleri yaratmakta tecrubeliyim. Araştırma yapmaktan ve yeni yazılımları denemekten keyif alıyorum. Sizin ve şirketiniz için verimli çözümler sunabilirim.",
-  ],
-  education: [
-    "Öğrenim",
-    "AYBÜ'de, Bilgisayar Mühendisliği bölümü öğrencisiyim ve öğrenim hayatımın üçüncü yılındayım. Derslerim, programlama dilleri, algoritmalar, bilgisayar mimarisi, yapay zeka ve ağ gibi geniş bir yelpazedeki konuları kapsıyor. Eğitimim sayesinde, teorik kavramlarda güçlü bir temel kazanırken aynı zamanda kodlama ve problem çözme gibi pratik beceriler de edindim. ",
-  ],
+  about: {
+    sysnopsis: [
+      "Merhaba,",
+      "Ben",
+      "Denis",
+      "web geliştirme üzerine odaklanan bir bilgisayar mühendisliği öğrencisiyim.",
+      "Sunucu tarafl uygulamaları geliştirmek ve duyarlı web siteleri oluşturmak konusunda deneyimliyim. Yeni teknolojiyle ilgiliyim, araştırma yapmayı ve yeni yazılımlar denemeyi seviyorum.",
+    ],
+    overview: [
+      "Şu anda, ",
+      "AYBÜ'de",
+      "Bilgisayar Mühendisliği bölümünde ",
+      "öğrenciyim.",
+      "Öğrenim hayatımın ",
+      "üçüncü yılındayım.",
+    ],
+    description: [
+      "--tux-fanatigi",
+      "Linux tabanlı işletim sistemlerine ve sundukları özgürlüğe çekiliyorum. Yeni distroları denemekten ve birbirleri arasındaki farkları görmekten büyük keyif alıyorum.",
+      "--sinema-gurusu",
+      "Sovyet ve Asya filmlerinin yönetmenliği ve sinematografisi beni her zaman büyülemiştir. Bu bölgelerin filmlerini birbirinden ayıran benzersiz tarzlar, hikaye anlatma teknikleri ve kültürel bağlamlar beni derinden etkiliyor.",
+      "--gymrat",
+      "Klasik estetiği ve fonksiyonel güce odaklanmayı ilham verici buluyorum. Benim için, tutarlı antrenmanla birlikte ilerleme yoluyla hedefler belirleme ve bunlara ulaşma süreci hem fiziksel hem de zihinsel olarak ödüllendirici.",
+    ],
+  },
   skills: [
     {
       name: "JS",
@@ -52,22 +68,56 @@ const tr = {
         "Neovim'i uzun süredir kullanmakta olduğumdan dolayı yeni Neovim versiyonlarının ve pluginlerinin konfigürasyonu için kullanılan Lua dilinde belirli bir yeterlilik kazandım. Lua ile olan deneyimim sayesinde söz dizimi, veri yapıları ve kontrol akışı hakkında daha derin bir anlayış geliştirdim.",
     },
   ],
-  interests: [
-    [
-      "Tux fanıyım.",
-      "İşletim Sistemleri",
-      "Özellikle Linux tabanlı işletim sistemleri ve sağladıkları özgürlük beni cezbediyor. Yeni distroları denemekten ve birbirleri arasındaki farkları görmekten büyük keyif alıyorum.",
-    ],
-    [
-      "Sinema gurusuyum.",
-      "Sinema",
-      "Sovyet ve Asya filmlerinin yönetmenliği ve sinematografisi beni her zaman büyülemiştir. Bu bölgelerin filmlerini birbirinden ayıran benzersiz tarzlar, hikaye anlatma teknikleri ve kültürel bağlamlar beni derinden etkiliyor.",
-    ],
-    [
-      "Gymratim.",
-      "Ağırlık Kaldırma",
-      "Klasik estetiği ve fonksiyonel güce odaklanmayı ilham verici buluyorum. Benim için, tutarlı antrenmanla birlikte ilerleme yoluyla hedefler belirleme ve bunlara ulaşma süreci hem fiziksel hem de zihinsel olarak ödüllendirici.",
-    ],
+  projects: [
+    {
+      mobileFileTitle: "bilinear_scaling",
+      desktopFileTitle: "bilinear_scaling",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "cli_todo_app",
+      desktopFileTitle: "cli_todo_app",
+      title: "CLI Todo App",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "nvidia_cuda",
+      desktopFileTitle: "nvidia_cuda",
+      title: "Bilinear Scaling with NVIDIA CUDA",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "chinese_chekers_ai",
+      desktopFileTitle: "chinese_chekers_ai",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "java_search_algo",
+      desktopFileTitle: "java_search_algorithm",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "veterinary_system",
+      desktopFileTitle: "veterinary_system",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "ttol_game",
+      desktopFileTitle: "two_truths_one_lie_game",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
   ],
 };
 export default tr;

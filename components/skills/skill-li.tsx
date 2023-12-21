@@ -52,10 +52,10 @@ export default function SkillsLi({
               ref={ref}
               className="inline-block justify-center items-center m-4 max-w-6xl"
             >
-              <h1 className="text-5xl font-bold">
-                {languageContent.interests[0][1]}
+              <h1 className="mb-4 text-5xl font-bold">
+                {languageContent.skills[index][1]}
               </h1>
-              <p>{languageContent.interests[0][2]}</p>
+              <p className="">{languageContent.skills[index][2]}</p>
             </div>
           </motion.div>
         )}
@@ -63,11 +63,3 @@ export default function SkillsLi({
     </MotionConfig>
   );
 }
-
-// <Image
-//   width={100}
-//   height={100}
-//   src="archlinux.svg"
-//   alt="archlinux.svg"
-//   className="absolute top-1/4 left-1/4 w-2/6 h-2/6 object-cover opacity-50"
-// />

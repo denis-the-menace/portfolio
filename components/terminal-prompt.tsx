@@ -8,7 +8,6 @@ export default function TerminalPrompt({
   isTerminalPromptRendered: (state: boolean) => void;
 }) {
   let isHome;
-
   if (path === "") isHome = true;
   else isTerminalPromptRendered(true);
 

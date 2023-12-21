@@ -1,10 +1,10 @@
 const en = {
   neofetchPanel: [
-    ["About", "Me"],
-    ["Skills", "JavaScript, React, C, Java, C#..."],
-    ["Projects", "Web Apps, AI, Parallel Programming"],
-    ["Links"],
-    ["Resume", "Click for PDF"],
+    ["About:", "Me"],
+    ["Skills:", "JavaScript, React, C, Java, C#..."],
+    ["Projects:", "Web Apps, AI, Parallel Programming"],
+    ["Resume:", "Click for PDF"],
+    ["Links:"],
   ],
   about: {
     synopsis: [
@@ -32,7 +32,11 @@ const en = {
       "I find classic aesthetics and the focus on functional strength to be inspiring. For me, the process of setting and achieving goals through consistent training and progression is rewarding both physically and mentally.",
     ],
   },
-  skills: [["Frontend"], ["Backend"], ["General"]],
+  skills: [
+    ["Frontend", "React, Next.js, Tailwind","I specialize in using React and Next.js for frontend development. I focus on creating responsive websites which have user-friendly interfaces that adapt seamlessly across devices. I also love working with TailwindCSS and Framer Motion because of the simplicity and effectiveness they provide."],
+    ["Backend", "Express.js, ASP.NET, SQL, Authentication","I specialize in Express.js and have experience with Spring and ASP.NET. My expertise in SQL allows me to efficiently manage and query databases, ensuring seamless data handling. I am also able to implement secure authentication and authorization. Additionally, my passion for C amplifies my ability to optimize code for efficiency."],
+    ["General", "Linux","Linux has been pivotal in shaping my programming journey. Embracing the Linux environment not only expanded my technical capabilities but also transformed my approach to problem-solving. Navigating through Linux systems has honed my understanding of computer architecture, file systems, and command-line operations, empowering me to debug and optimize code with a deeper comprehension."],
+  ],
   skills1: [
     {
       name: "JS",
@@ -70,22 +74,56 @@ const en = {
         "As a long-time user of Neovim, I have gained proficiency in the Lua programming language since it is the embedded scripting language that powers many of Neovim's customization features. Through my experience with Lua, I have developed a deeper understanding of its syntax, data structures, and control flow.",
     },
   ],
-  interests: [
-    [
-      "I am a Tux fan.",
-      "Operating Systems",
-      "In particular, I am drawn to Linux-based operating systems and the freedom they provide. I thoroughly enjoy trying out new distros and seeing how they differ from one another.",
-    ],
-    [
-      "I am a cinephile.",
-      "Cinema",
-      "I have always been fascinated by the direction and the cinematography of Soviet and Asian films. I am drawn to the unique styles, storytelling techniques, and cultural contexts that distinguish these regions' films.",
-    ],
-    [
-      "I am a gymrat.",
-      "Weightlifting",
-      "I find classic aesthetics and the focus on functional strength to be inspiring. For me, the process of setting and achieving goals through consistent training and progression is rewarding both physically and mentally.",
-    ],
+  projects: [
+    {
+      mobileFileTitle: "bilinear_scaling",
+      desktopFileTitle: "bilinear_scaling",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "cli_todo_app",
+      desktopFileTitle: "cli_todo_app",
+      title: "CLI Todo App",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "nvidia_cuda",
+      desktopFileTitle: "nvidia_cuda",
+      title: "Bilinear Scaling with NVIDIA CUDA",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "chinese_chekers_ai",
+      desktopFileTitle: "chinese_chekers_ai",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "java_search_algo",
+      desktopFileTitle: "java_search_algorithm",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "veterinary_system",
+      desktopFileTitle: "veterinary_system",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
+    {
+      mobileFileTitle: "ttol_game",
+      desktopFileTitle: "two_truths_one_lie_game",
+      title: "Bilinear Scaling",
+      description: "Parallel program made in C for image scaling.",
+      url: "https://github.com/denis-the-menace",
+    },
   ],
 };
 

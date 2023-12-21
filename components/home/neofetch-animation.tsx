@@ -32,7 +32,7 @@ export default function NeofetchAnimation({
   }, [revealedLetters, setShowNeofetchPanel]);
 
   return (
-    <p className={`inline-flex items-center gap-1 ${hideCursor ? "hide" : ""}`}>
+    <p className={`neofetch-animation ${hideCursor ? "hide" : ""}`}>
       {"neofetch".substring(0, revealedLetters)}
     </p>
   );

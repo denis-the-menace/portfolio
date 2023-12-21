@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Custom404() {
+export default function NotFound() {
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}

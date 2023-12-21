@@ -1,9 +1,8 @@
 import { useLocalization } from "@/components/localization-context";
-import { motion, useInView, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function About() {
   const languageContent = useLocalization();
-  const { scrollYProgress } = useScroll();
 
   return (
     <motion.div
@@ -31,7 +30,7 @@ export default function About() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 1 }}
+                transition={{ duration: 0.5, delay: 3}}
               >
                 {languageContent.about.synopsis[0]}&nbsp;
               </motion.h1>
@@ -39,7 +38,7 @@ export default function About() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
+                transition={{ duration: 0.5}}
               >
                 {languageContent.about.synopsis[1]}&nbsp;
               </motion.h1>
@@ -47,7 +46,7 @@ export default function About() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 1.7 }}
+                transition={{ duration: 0.5}}
                 className="text-clrpink"
               >
                 {languageContent.about.synopsis[2]}
@@ -57,7 +56,7 @@ export default function About() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, delay: 2.2 }}
+              transition={{ duration: 0.5}}
               className="text-3xl md:text-5xl font-bold mb-4"
             >
               {languageContent.about.synopsis[3]}
@@ -66,7 +65,7 @@ export default function About() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, delay: 2.5 }}
+              transition={{ duration: 0.5}}
               className="text-2xl md:text-3xl"
             >
               {languageContent.about.synopsis[4]}

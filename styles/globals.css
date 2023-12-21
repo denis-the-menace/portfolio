@@ -54,6 +54,24 @@
   }
 }
 
+.neofetch-animation {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.neofetch-animation::after {
+  content: "";
+  width: 0.75rem;
+  height: 1.5rem;
+  background: var(--clr-foam);
+  display: inline-block;
+}
+
+.hide::after {
+  display: none;
+}
+
 .neofetch-text-container__neofetch::after {
   content: "";
   width: 0.75rem;
@@ -103,11 +121,30 @@
     box-shadow 0.3s ease-in-out;
 }
 
+.exit-prompt-container-neofetch {
+  display: inline-flex;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
 .exit-prompt-container:hover {
   cursor: pointer;
 }
 
+.exit-prompt-container-neofetch:hover {
+  cursor: pointer;
+}
+
 .exit-prompt-container__prompt {
+  display: inline-flex;
+  align-items: center;
+  color: var(--clr-8);
+  transition: color;
+}
+
+.exit-prompt-container-neofetch__prompt {
   display: inline-flex;
   align-items: center;
   color: var(--clr-8);
@@ -123,13 +160,32 @@
   animation: cursor-blink 1s steps(2) infinite;
 }
 
+.exit-prompt-container-neofetch__prompt::after {
+  content: "";
+  width: 0.75rem;
+  height: 1.5rem;
+  background: var(--clr-foam);
+  display: inline-block;
+  animation: cursor-blink 1s steps(2) infinite;
+}
+
 .exit-prompt-container:hover,
 .exit-prompt-container:focus {
   box-shadow: inset 3.6rem 0 0 0 #54b3d6;
   color: white;
 }
 
-.exit-prompt-container:hover .exit-prompt::after {
+.exit-prompt-container-neofetch:hover,
+.exit-prompt-container-neofetch:focus {
+  box-shadow: inset 7.125rem 0 0 0 #54b3d6;
+  color: white;
+}
+
+.exit-prompt-container:hover .exit-prompt-container::after {
+  opacity: 0;
+}
+
+.exit-prompt-container-neofetch:hover .exit-prompt-container-neofetch::after {
   opacity: 0;
 }
 
@@ -141,7 +197,19 @@
   transition: opacity 0.5s linear;
 }
 
+.exit-prompt-container-neofetch__rerender {
+  display: inline;
+  color: var(--clr-2);
+  margin-left: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
 .exit-prompt-container:hover .exit-prompt-container__rerender {
+  opacity: 1;
+}
+
+.exit-prompt-container-neofetch:hover .exit-prompt-container-neofetch__rerender {
   opacity: 1;
 }
 
@@ -204,15 +272,3 @@
   right: -4rem;
 }
 }
-
-/* @media only screen and (max-width: 575px) { */
-/*   .interests__img { */
-/*     right: -23%; */
-/*   } */
-/* } */
-
-/* @media only screen and (max-width: 385px) { */
-/*   .interests__img { */
-/*     right: -35%; */
-/*   } */
-/* } */

@@ -3,6 +3,7 @@ import en from "@/locales/en";
 import tr from "@/locales/tr";
 import { LocalizationProvider } from "@/components/localization-context";
 import { AnimatePresence, motion } from "framer-motion";
+import Head from "next/head";
 import TerminalHeader from "@/components/terminal-header";
 import TerminalPrompt from "@/components/terminal-prompt";
 import TerminalExitPrompt from "@/components/terminal-exit-prompt";
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
   // _app.tsx file rather than index.tsx file.
   const [isTerminalPromptRendered, setIsTerminalPromptRendered] =
     useState(false);
+
   return (
     <LocalizationProvider value={t}>
       <style jsx global>{`
@@ -34,7 +36,14 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${firaCode.style.fontFamily};
         }
       `}</style>
+      <Head>
+        <title>denis@gercek</title>
+        <meta name="description" content="Denis Gercek's personal website." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <AnimatePresence mode="wait">
         <TerminalHeader pathname={pathname} />
+      </AnimatePresence>
       <TerminalPrompt
         path={pathname.replace("/", "")}
         isTerminalPromptRendered={setIsTerminalPromptRendered}

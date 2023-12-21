@@ -1,8 +1,11 @@
+import { useLocalization } from "@/components/localization-context";
 import ProjectCard from "@/components/projects/project-card";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Projects() {
+  const language = useLocalization();
+  const projects = language.projects;
   const [isMobile, setIsMobile] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -60,55 +63,3 @@ export type ProjectType = {
   description: string;
   url: string;
 };
-
-export const projects = [
-  {
-    mobileFileTitle: "bilinear_scaling",
-    desktopFileTitle: "bilinear_scaling",
-    title: "Bilinear Scaling",
-    description: "Parallel program made in C for image scaling.",
-    url: "https://github.com/denis-the-menace",
-  },
-  {
-    mobileFileTitle: "cli_todo_app",
-    desktopFileTitle: "cli_todo_app",
-    title: "CLI Todo App",
-    description: "Parallel program made in C for image scaling.",
-    url: "https://github.com/denis-the-menace",
-  },
-  {
-    mobileFileTitle: "nvidia_cuda",
-    desktopFileTitle: "nvidia_cuda",
-    title: "Bilinear Scaling with NVIDIA CUDA",
-    description: "Parallel program made in C for image scaling.",
-    url: "https://github.com/denis-the-menace",
-  },
-  {
-    mobileFileTitle: "chinese_chekers_ai",
-    desktopFileTitle: "chinese_chekers_ai",
-    title: "Bilinear Scaling",
-    description: "Parallel program made in C for image scaling.",
-    url: "https://github.com/denis-the-menace",
-  },
-  {
-    mobileFileTitle: "java_search_algo",
-    desktopFileTitle: "java_search_algorithm",
-    title: "Bilinear Scaling",
-    description: "Parallel program made in C for image scaling.",
-    url: "https://github.com/denis-the-menace",
-  },
-  {
-    mobileFileTitle: "veterinary_system",
-    desktopFileTitle: "veterinary_system",
-    title: "Bilinear Scaling",
-    description: "Parallel program made in C for image scaling.",
-    url: "https://github.com/denis-the-menace",
-  },
-  {
-    mobileFileTitle: "ttol_game",
-    desktopFileTitle: "two_truths_one_lie_game",
-    title: "Bilinear Scaling",
-    description: "Parallel program made in C for image scaling.",
-    url: "https://github.com/denis-the-menace",
-  },
-];

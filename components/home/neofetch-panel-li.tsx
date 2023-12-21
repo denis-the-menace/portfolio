@@ -20,9 +20,26 @@ export default function NeofetchPanelLi({
         transition={{ delay: 0.5 + index * 0.3 }}
         className="main-panel__ul__li"
       >
+        <Link href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          <span className="text-clrpink font-bold">
+            {`${language.neofetchPanel[index][0]} `}
+          </span>
+          {`${language.neofetchPanel[index][1]}`}
+        </Link>
+      </motion.li>
+    );
+  else if (index === 4)
+    return (
+      <motion.li
+        key={index}
+        initial={{ opacity: 0, x: -10 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5 + index * 0.3 }}
+        className="main-panel__ul__li"
+      >
         <div className="inline-flex gap-4">
           <span className="text-clrpink font-bold">
-            {`${language.neofetchPanel[index][0]}: `}
+            {`${language.neofetchPanel[index][0]} `}
           </span>
           <Link
             href="https://github.com/denis-the-menace"
@@ -55,27 +72,6 @@ export default function NeofetchPanelLi({
         </div>
       </motion.li>
     );
-  else if (index === 4)
-    return (
-      <motion.li
-        key={index}
-        initial={{ opacity: 0, x: -10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.5 + index * 0.3 }}
-        className="main-panel__ul__li"
-      >
-        <Link
-          href="resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="text-clrpink font-bold">
-            {`${language.neofetchPanel[index][0]}: `}
-          </span>
-          {`${language.neofetchPanel[index][1]}`}
-        </Link>
-      </motion.li>
-    );
 
   return (
     <motion.li
@@ -87,7 +83,7 @@ export default function NeofetchPanelLi({
     >
       <Link href={`/${route}`}>
         <span className="text-clrpink font-bold">
-          {`${language.neofetchPanel[index][0]}: `}
+          {`${language.neofetchPanel[index][0]} `}
         </span>
         {`${language.neofetchPanel[index][1]}`}
       </Link>

@@ -7,8 +7,8 @@ export default function Page() {
     "about",
     "skills",
     "projects",
-    "links",
     "resume",
+    "links",
   ];
 
   return (
@@ -20,13 +20,13 @@ export default function Page() {
       className="flex flex-col md:flex-row md:gap-20 mb-4 md:my-16 mx-8 md:text-3xl"
     >
       <Image
-        width={80}
-        height={200}
-        src="archlinux.svg"
-        alt="arch"
-        className="w-96 h-96"
+        width={384}
+        height={384}
+        src="react-logo-pink.svg"
+        alt="react-logo"
+        loading="eager"
       />
-      <nav className="max-w-280 flex-col justify-center">
+      <nav className="flex-col justify-center">
         <div className="flex">
           <p className="select-none text-clrpink">denis</p>
           <p className="select-none">@</p>
