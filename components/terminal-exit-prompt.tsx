@@ -9,6 +9,7 @@ export default function TerminalExitPrompt({
   path: string;
   isTerminalPromptRendered: (state: boolean) => void;
 }) {
+  const router = useRouter();
   let isHome;
   if (path === "") isHome = true;
 
@@ -27,20 +28,23 @@ export default function TerminalExitPrompt({
         <>
           <p>{path}</p>
           <span className="inline text-clrpink font-bold">{"> "}</span>
-          <Link
-            href="/"
-            onClick={() => isTerminalPromptRendered(false)}
+          <a
+            onClick={() => {
+              isTerminalPromptRendered(false);
+              localStorage.setItem("rerenderNeofetch", JSON.stringify(true));
+              location.reload();
+            }}
             className="exit-prompt-container-neofetch"
           >
             <p className="exit-prompt-container-neofetch__prompt">neofetch</p>
             <p className="exit-prompt-container-neofetch__rerender">Rerender</p>
-          </Link>
+          </a>
         </>
       ) : (
         <>
           <p>{path}</p>
           <span className="inline text-clrpink font-bold">{"> "}</span>
-          <Link href={".."} className="exit-prompt-container">
+          <Link href={"/"} className="exit-prompt-container">
             <p className="exit-prompt-container__prompt">exit</p>
             <p className="exit-prompt-container__rerender">Go back</p>
           </Link>

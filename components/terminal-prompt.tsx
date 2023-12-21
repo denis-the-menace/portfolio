@@ -2,14 +2,17 @@ import NeofetchAnimation from "./home/neofetch-animation";
 
 export default function TerminalPrompt({
   path,
-  isTerminalPromptRendered,
+  setIsTerminalPromptRendered,
 }: {
   path: string;
-  isTerminalPromptRendered: (state: boolean) => void;
+  setIsTerminalPromptRendered: (state: boolean) => void;
 }) {
   let isHome;
   if (path === "") isHome = true;
-  else isTerminalPromptRendered(true);
+  else {
+    setIsTerminalPromptRendered(true);
+    console.log(setIsTerminalPromptRendered);
+  }
 
   if (path === "about") path = "man denis";
   else if (path === "skills") path += ".md";
@@ -20,7 +23,7 @@ export default function TerminalPrompt({
       <p>~</p>
       <span className="inline text-clrpink font-bold">{"> "}</span>
       {isHome ? (
-        <NeofetchAnimation setShowNeofetchPanel={isTerminalPromptRendered} />
+        <NeofetchAnimation setShowNeofetchPanel={setIsTerminalPromptRendered} />
       ) : (
         <span>{path}</span>
       )}

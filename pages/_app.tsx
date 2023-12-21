@@ -46,14 +46,17 @@ export default function App({ Component, pageProps }: AppProps) {
       </AnimatePresence>
       <TerminalPrompt
         path={pathname.replace("/", "")}
-        isTerminalPromptRendered={setIsTerminalPromptRendered}
+        setIsTerminalPromptRendered={setIsTerminalPromptRendered}
       />
       <AnimatePresence mode="wait">
         <motion.div key={router.pathname} id="router-div">
           {isTerminalPromptRendered ? (
             <PageWrapper>
               <Component {...pageProps} />
-              <TerminalExitPrompt path={pathname.replace("/", "")} />
+              <TerminalExitPrompt
+                path={pathname.replace("/", "")}
+                isTerminalPromptRendered={setIsTerminalPromptRendered}
+              />
             </PageWrapper>
           ) : null}
         </motion.div>
