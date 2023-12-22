@@ -13,7 +13,7 @@ export default function Skills() {
       transition={{ duration: 1 }}
       className="mb-20"
     >
-      <motion.ul className="flex flex-col flex-wrap justify-center gap-16 md:gap-24 list-none my-4 md:my-16 mx-8 md:mx-20">
+      <motion.ul className="flex flex-col flex-wrap justify-center gap-20 md:gap-32 list-none my-4 md:my-16 mx-8 md:mx-20">
         <SkillLi
           key={0}
           index={0}

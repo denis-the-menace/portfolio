@@ -11,30 +11,34 @@ import PageWrapper from "@/components/page-wrapper";
 import { useState } from "react";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
-import { Fira_Code } from "next/font/google";
 
-const firaCode = Fira_Code({
-  // subsets: ["latin"],
-  variable: "--font-firacode",
-  preload: false,
-});
+// next/font doesn't work properly
+// import { Fira_Code } from "next/font/google";
+
+// const firaCode = Fira_Code({
+//   // subsets: ["latin"],
+//   variable: "--font-firacode",
+//   preload: false,
+// });
+// html {
+//   font-family: ${firaCode.style.fontFamily};
+// }
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { locale } = router;
+
   const t = locale === "en" ? en : tr;
   const pathname = router.pathname;
-  // Below state is used to control visibilty of index page from
-  // _app.tsx file rather than index.tsx file.
+
+  // Below state is used to control visibilty of index page after neofetch text animation.
   const [isTerminalPromptRendered, setIsTerminalPromptRendered] =
     useState(false);
 
   return (
     <LocalizationProvider value={t}>
       <style jsx global>{`
-        html {
-          font-family: ${firaCode.style.fontFamily};
-        }
+        @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap");
       `}</style>
       <Head>
         <title>denis@gercek</title>

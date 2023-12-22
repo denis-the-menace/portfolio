@@ -11,11 +11,10 @@ export default function TerminalPrompt({
   if (path === "") isHome = true;
   else {
     setIsTerminalPromptRendered(true);
-    console.log(setIsTerminalPromptRendered);
   }
 
   if (path === "about") path = "man denis";
-  else if (path === "skills") path += ".md";
+  else if (path === "skills") path = "xdg-open skills";
   else if (path === "projects") path = "cd projects && fzf";
 
   return (

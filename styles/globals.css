@@ -1,8 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap");
 
-.main-panel__ul__li{
+font-family: "Fira Code", monospace;
+
+.main-panel__ul__li {
   margin-bottom: 0.25rem;
 }
 
@@ -209,7 +212,8 @@
   opacity: 1;
 }
 
-.exit-prompt-container-neofetch:hover .exit-prompt-container-neofetch__rerender {
+.exit-prompt-container-neofetch:hover
+  .exit-prompt-container-neofetch__rerender {
   opacity: 1;
 }
 
@@ -217,7 +221,7 @@
   margin: 2rem 0;
 }
 
-.interests__button{
+.interests__button {
   border-radius: 1rem;
 }
 
@@ -240,8 +244,8 @@
   transition: right 0.3s ease-in-out;
 }
 
-@media (max-width:1250px){
-  .interests__img{
+@media (max-width: 1250px) {
+  .interests__img {
     width: 5rem;
   }
 }
@@ -267,8 +271,8 @@
 }
 
 @media only screen and (max-width: 768px) {
-.interests__button:hover .interests__img,
-.interests__button:focus .interests__img {
-  right: -4rem;
-}
+  .interests__button:hover .interests__img,
+  .interests__button:focus .interests__img {
+    right: -4rem;
+  }
 }

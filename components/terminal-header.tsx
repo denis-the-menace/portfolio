@@ -21,6 +21,7 @@ export default function TerminalHeader({ pathname }: { pathname: string }) {
             height={24}
             className="mx-4 h-auto"
             src="terminal-icon.svg"
+            key="terminal-icon"
             alt="terminal-icon"
           />
         ) : (
@@ -29,6 +30,7 @@ export default function TerminalHeader({ pathname }: { pathname: string }) {
             height={24}
             className="mx-4 h-auto"
             src="markdown-icon.svg"
+            key="markdown-icon"
             alt="markdown-icon"
           />
         )}

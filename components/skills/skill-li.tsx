@@ -29,7 +29,7 @@ export default function SkillsLi({
         onClick={onShow}
       >
         <button
-          className={`interests__button p-4 mr-24 relative text-2xl md:text-5xl inline-flex items-end ${color}`}
+          className={`interests__button p-4 mr-24 relative text-4xl md:text-5xl inline-flex items-end ${color}`}
         >
           {languageContent.skills[index][0]}
           <Image
@@ -52,7 +52,7 @@ export default function SkillsLi({
               ref={ref}
               className="inline-block justify-center items-center m-4 max-w-6xl"
             >
-              <h1 className="mb-4 text-5xl font-bold">
+              <h1 className="mb-4 text-4xl md:text-5xl font-bold">
                 {languageContent.skills[index][1]}
               </h1>
               <p className="">{languageContent.skills[index][2]}</p>

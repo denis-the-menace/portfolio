@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function TerminalExitPrompt({
   path,
@@ -9,7 +8,6 @@ export default function TerminalExitPrompt({
   path: string;
   isTerminalPromptRendered: (state: boolean) => void;
 }) {
-  const router = useRouter();
   let isHome;
   if (path === "") isHome = true;
 

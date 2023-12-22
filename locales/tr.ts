@@ -1,18 +1,18 @@
 const tr = {
   neofetchPanel: [
     ["Hakkımda", ""],
-    ["Beceriler:", "JS, React, Java, C#, C..."],
+    ["Beceriler:", "JS, React, Java, C, SQL..."],
     ["Projeler:", "Web Uygulamaları, Yapay Zeka, Paralel Programlama"],
     ["CV:", "PDF için tıklayın"],
     ["Bağlantılar:"],
   ],
   about: {
-    sysnopsis: [
-      "Merhaba,",
+    synopsis: [
+      "Selam,",
       "Ben",
       "Denis",
       "web geliştirme üzerine odaklanan bir bilgisayar mühendisliği öğrencisiyim.",
-      "Sunucu tarafl uygulamaları geliştirmek ve duyarlı web siteleri oluşturmak konusunda deneyimliyim. Yeni teknolojiyle ilgiliyim, araştırma yapmayı ve yeni yazılımlar denemeyi seviyorum.",
+      "Sunucu taraflı uygulamaları geliştirmek ve duyarlı web siteleri oluşturmak konusunda deneyimliyim. Yeni teknolojiyle ilgiliyim, araştırma yapmayı ve yeni yazılımlar denemeyi seviyorum.",
     ],
     overview: [
       "Şu anda, ",
@@ -20,55 +20,42 @@ const tr = {
       "Bilgisayar Mühendisliği bölümünde ",
       "öğrenciyim.",
       "Öğrenim hayatımın ",
-      "üçüncü yılındayım.",
+      "dördüncü yılındayım.",
     ],
     description: [
       "--tux-fanatigi",
-      "Linux tabanlı işletim sistemlerine ve sundukları özgürlüğe çekiliyorum. Yeni distroları denemekten ve birbirleri arasındaki farkları görmekten büyük keyif alıyorum.",
+      "Linux tabanlı işletim sistemlerine ve sundukları özgürlüğe çekiliyorum.",
       "--sinema-gurusu",
-      "Sovyet ve Asya filmlerinin yönetmenliği ve sinematografisi beni her zaman büyülemiştir. Bu bölgelerin filmlerini birbirinden ayıran benzersiz tarzlar, hikaye anlatma teknikleri ve kültürel bağlamlar beni derinden etkiliyor.",
+      "Sovyet ve Asya filmlerinin yönetmenliği ve sinematografisi beni her zaman büyülemiştir.",
       "--gymrat",
-      "Klasik estetiği ve fonksiyonel güce odaklanmayı ilham verici buluyorum. Benim için, tutarlı antrenmanla birlikte ilerleme yoluyla hedefler belirleme ve bunlara ulaşma süreci hem fiziksel hem de zihinsel olarak ödüllendirici.",
+      "Disiplinli antrenmanlarla birlikte hedefler belirleme ve bunlara ulaşma sürecini hem fiziksel hem de zihinsel olarak ödüllendirici buluyorum.",
     ],
   },
   skills: [
-    {
-      name: "JS",
-      description:
-        "REST ve kimlik doğrulama API'leri oluşturmak için Express.js gibi çeşitli çerçeveleri ve kitaplıkları kullanma ve veritabanı yönetimi için Prisma gibi ORM'ler kullanmak kullanmakta deneyimliyim. Ek olarak, MongoDB, MySQL ve SQL Server dahil olmak üzere çeşitli veritabanlarını kullanma deneyimim var ve durum yönetimi için Redux'a aşinayım.",
-    },
-    {
-      name: "React",
-      description:
-        "Web projelerimde sıklıkla React ile birlikte SSR ve pre-fetching gibi özellikleri destekleyen Next.js'i kullanıyorum. Durum yönetimi, yaşam döngüsü yöntemleri ve bileşen tabanlı mimari hakkında derin bir anlayış geliştirdim. Bu portföy sitemi de React ve Next.js'in en yeni versiyonları olan React 18 ve Next.js 13 beta kullanarak oluşturdum.",
-    },
-    {
-      name: "SQL",
-      description:
-        "MySQL ve SQL Server gibi çeşitli veritabanı yönetim sistemlerini kullandım. Karmaşık SQL sorguları oluşturma, veritabanları tasarlama ve yönetme konusunda deneyimliyim, ayrıca veri taşıma, veri temizleme ve veri işleme içeren veritabanı projelerinde çalıştım. Ek olarak Entity Framework, Hibernate ve Prisma gibi ORM'leri kullanma deneyimim var.",
-    },
-    {
-      name: "Java",
-      description:
-        "Java'yı çeşitli projeler için kullandım ve bu dilde güçlü bir temele sahibim. Veritabanlarıyla çalışmaktan API oluşturmaya ve yapay zekaya kadar birçok projede çalıştım. Java'daki deneyimim bana, yazılım geliştirme alanında bir dizi projeyi ele almamı sağlayan çok yönlü bir beceri seti verdi.",
-    },
-    {
-      name: "C",
-      description:
-        "C ile bir aşk-nefret ilişkim var ve bu programlama dilini çeşitli projelerde kullandım. Pthreads kullanarak çok iş parçacıklı programlar oluşturma ve MPI kullanarak paralelleştirme teknikleri geliştirme üzerinde çalıştım. Bunlar işletim sistemleri dünyasının derinliklerine dalmamı ve bilgisayar mimarisi üzerine daha sofistike bir bakış açısı kazanmamı sağladı. ",
-    },
-    {
-      name: "C#",
-      description:
-        "TCHEALTH'deki stajım sırasında, ölçeklenebilir ve güvenli uygulamalar oluşturmamı sağlayan ASP.NET çerçevesini kullanarak REST ve kimlik doğrulama API'leri oluşturma konusunda deneyim kazandım. Ek olarak, veritabanı erişimini basitleştirmek ve üretkenliği artırmak için .NET'in popüler bir ORM çerçevesi olan Entity Framework ile çalıştım.",
-    },
-    {
-      name: "Lua",
-      description:
-        "Neovim'i uzun süredir kullanmakta olduğumdan dolayı yeni Neovim versiyonlarının ve pluginlerinin konfigürasyonu için kullanılan Lua dilinde belirli bir yeterlilik kazandım. Lua ile olan deneyimim sayesinde söz dizimi, veri yapıları ve kontrol akışı hakkında daha derin bir anlayış geliştirdim.",
-    },
+    [
+      "Frontend",
+      "React, Next.js, Tailwind",
+      "Frontend geliştirme için React ve Next.js kullanıyorum. Cihazlar arasında sorunsuz bir şekilde uyum sağlayan, kullanıcı dostu arayüzlere sahip duyarlı web siteleri oluşturmaya odaklanıyorum. Sağladıkları basitlik ve verimlilik nedeniyle TailwindCSS ve Framer Motion ile çalışmayı da seviyorum.",
+    ],
+    [
+      "Backend",
+      "Express.js, ASP.NET, SQL, Auth",
+      "I specialize in Express.js and have experience with Spring and ASP.NET. My expertise in SQL allows me to efficiently manage and query databases, ensuring seamless data handling. I am also able to implement secure authentication and authorization. Additionally, my passion for C amplifies my ability to optimize code for efficiency.",
+    ],
+    [
+      "Genel",
+      "Linux",
+      "Linux has been pivotal in shaping my programming journey. Embracing the Linux environment not only expanded my technical capabilities but also transformed my approach to problem-solving. Navigating through Linux systems has honed my understanding of computer architecture, file systems, and command-line operations, empowering me to debug and optimize code with a deeper comprehension.",
+    ],
   ],
   projects: [
+    {
+      mobileFileTitle: "portfolio",
+      desktopFileTitle: "portfolio",
+      title: "Portfolio Website",
+      description: "This portfolio website made with React and Next.js.",
+      url: "https://github.com/denis-the-menace/portfolio",
+    },
     {
       mobileFileTitle: "bilinear_scaling",
       desktopFileTitle: "bilinear_scaling",
@@ -77,45 +64,48 @@ const tr = {
       url: "https://github.com/denis-the-menace",
     },
     {
-      mobileFileTitle: "cli_todo_app",
-      desktopFileTitle: "cli_todo_app",
-      title: "CLI Todo App",
-      description: "Parallel program made in C for image scaling.",
-      url: "https://github.com/denis-the-menace",
-    },
-    {
       mobileFileTitle: "nvidia_cuda",
       desktopFileTitle: "nvidia_cuda",
-      title: "Bilinear Scaling with NVIDIA CUDA",
-      description: "Parallel program made in C for image scaling.",
+      title: "Bilinear Scaling with CUDA",
+      description:
+        "Parallel program made in C for image scaling using NVIDIA CUDA.",
       url: "https://github.com/denis-the-menace",
     },
     {
       mobileFileTitle: "chinese_chekers_ai",
       desktopFileTitle: "chinese_chekers_ai",
-      title: "Bilinear Scaling",
-      description: "Parallel program made in C for image scaling.",
+      title: "Chinese Checkers AI",
+      description: "AI program made for understanding adversarial search.",
       url: "https://github.com/denis-the-menace",
     },
     {
       mobileFileTitle: "java_search_algo",
       desktopFileTitle: "java_search_algorithm",
-      title: "Bilinear Scaling",
-      description: "Parallel program made in C for image scaling.",
+      title: "DFS and BFS Maze Search",
+      description: "Java program made to visualize DFS and BFS.",
+      url: "https://github.com/denis-the-menace/DFS-BFS-Maze-Search",
+    },
+    {
+      mobileFileTitle: "cli_todo_app",
+      desktopFileTitle: "cli_todo_app",
+      title: "CLI Todo App",
+      description: "Simple CLI todo app made for my personal usage.",
       url: "https://github.com/denis-the-menace",
     },
     {
       mobileFileTitle: "veterinary_system",
       desktopFileTitle: "veterinary_system",
-      title: "Bilinear Scaling",
-      description: "Parallel program made in C for image scaling.",
-      url: "https://github.com/denis-the-menace",
+      title: "Veterinary System",
+      description:
+        "Veterinary system with authentication using JSON Web Token.",
+      url: "https://github.com/denis-the-menace/Veterinary",
     },
     {
       mobileFileTitle: "ttol_game",
       desktopFileTitle: "two_truths_one_lie_game",
-      title: "Bilinear Scaling",
-      description: "Parallel program made in C for image scaling.",
+      title: "Two Truths One Lie Game",
+      description:
+        "Two truths one lie game where the questions are generated by ChatGPT.",
       url: "https://github.com/denis-the-menace",
     },
   ],

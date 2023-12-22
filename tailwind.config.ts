@@ -9,12 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["var(--font-firacode)"],
-        line: ["var(--font-linefont)"],
-      },
-      fontWeight: {
-        normal: "500",
-        bold: "700",
+        mono: ["Fira Code", "monospace"],
       },
       colors: {
         clr1: "#26233a",
