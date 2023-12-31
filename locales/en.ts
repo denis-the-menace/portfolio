@@ -1,5 +1,6 @@
 const en = {
   routesList: ["home", "about", "skills", "projects"],
+  exit: "Go back",
   neofetchPanel: [
     ["About:", "Me"],
     ["Skills:", "JS, React, Java, C, SQL..."],

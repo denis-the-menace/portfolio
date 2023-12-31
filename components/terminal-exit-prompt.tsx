@@ -1,3 +1,4 @@
+import { useLocalization } from "@/components/localization-context";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -8,6 +9,7 @@ export default function TerminalExitPrompt({
   path: string;
   isTerminalPromptRendered: (state: boolean) => void;
 }) {
+  const languageContent = useLocalization();
   let isHome;
   if (path === "") isHome = true;
 
@@ -44,7 +46,9 @@ export default function TerminalExitPrompt({
           <span className="inline text-clrpink font-bold">{"> "}</span>
           <Link href={"/"} className="exit-prompt-container">
             <p className="exit-prompt-container__prompt">exit</p>
-            <p className="exit-prompt-container__rerender">Go back</p>
+            <p className="exit-prompt-container__rerender">
+              {languageContent.exit}
+            </p>
           </Link>
         </>
       )}

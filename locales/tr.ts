@@ -1,5 +1,6 @@
 const tr = {
   routesList: ["ana_sayfa", "hakkımda", "beceriler", "projeler"],
+  exit: "Geri dön",
   neofetchPanel: [
     ["Hakkımda", ""],
     ["Beceriler:", "JS, React, Java, C, SQL..."],
