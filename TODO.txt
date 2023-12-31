@@ -1,3 +1,2 @@
-skills kisminda basic skills, web dev, cloud diye ayirablirisin slideshowlari
-
-exit in marginini arttir body ye de margin koyabilirsin direkt
+terminal-exit-prompt daki go back ve rerender yazilarini locale ekle
+about kismindaki overview desktopda delayli gelmeli ama delayli gelince scroll yapilinca da delay veriyor onu coz

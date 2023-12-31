@@ -1,4 +1,5 @@
 const tr = {
+  routesList: ["ana_sayfa", "hakkımda", "beceriler", "projeler"],
   neofetchPanel: [
     ["Hakkımda", ""],
     ["Beceriler:", "JS, React, Java, C, SQL..."],
@@ -7,7 +8,9 @@ const tr = {
     ["Bağlantılar:"],
   ],
   about: {
+    general: ["Genel Komut Kılavuzu", "İSİM"],
     synopsis: [
+      "ÖZET",
       "Selam,",
       "Ben",
       "Denis",
@@ -15,6 +18,7 @@ const tr = {
       "Sunucu taraflı uygulamaları geliştirmek ve duyarlı web siteleri oluşturmak konusunda deneyimliyim. Yeni teknolojiyle ilgiliyim, araştırma yapmayı ve yeni yazılımlar denemeyi seviyorum.",
     ],
     overview: [
+      "GENEL BAKIŞ",
       "Şu anda, ",
       "AYBÜ'de",
       "Bilgisayar Mühendisliği bölümünde ",
@@ -23,6 +27,7 @@ const tr = {
       "dördüncü yılındayım.",
     ],
     description: [
+      "AÇIKLAMA",
       "--tux-fanatigi",
       "Linux tabanlı işletim sistemlerine ve sundukları özgürlüğe çekiliyorum.",
       "--sinema-gurusu",
@@ -39,13 +44,13 @@ const tr = {
     ],
     [
       "Backend",
-      "Express.js, ASP.NET, SQL, Auth",
-      "I specialize in Express.js and have experience with Spring and ASP.NET. My expertise in SQL allows me to efficiently manage and query databases, ensuring seamless data handling. I am also able to implement secure authentication and authorization. Additionally, my passion for C amplifies my ability to optimize code for efficiency.",
+      "Express.js, ASP.NET, SQL",
+      "Backend için Express.js kullanmayı tercih ediyorum, ek olarak Spring ve ASP.NET deneyimim var. SQL bilgim veritabanlarını verimli bir şekilde yönetmemi ve verileri sorunsuz bir şekilde işlememi sağlıyor. Ayrıca, güvenli authentication ve authorization deneyimim var. Bunun yanı sıra, C'ye olan tutkum, kodu optimize etme yeteneğimi arttırıyor.",
     ],
     [
       "Genel",
       "Linux",
-      "Linux has been pivotal in shaping my programming journey. Embracing the Linux environment not only expanded my technical capabilities but also transformed my approach to problem-solving. Navigating through Linux systems has honed my understanding of computer architecture, file systems, and command-line operations, empowering me to debug and optimize code with a deeper comprehension.",
+      "Linux, programlama yolculuğumu şekillendirmede önemli bir rol oynadı. Linux ortamını benimsemek teknik yeteneklerimi geliştirmekle kalmadı, aynı zamanda problem çözme yaklaşımımı da değiştirdi. Linux sistemleri bilgisayar mimarisi, dosya sistemleri ve terminal işlemlerine ilişkin anlayışımı geliştirerek kodu daha derin bir anlayışla debug ve optimize etme kabiliyeti kazanmamı sağladı.",
     ],
   ],
   projects: [

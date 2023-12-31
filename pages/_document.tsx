@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body
-        //h-screen
         className={`bg-clrsurface font-mono font-medium text-2xl text-clr8`}
       >
         <Main />

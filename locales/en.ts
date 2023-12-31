@@ -1,4 +1,5 @@
 const en = {
+  routesList: ["home", "about", "skills", "projects"],
   neofetchPanel: [
     ["About:", "Me"],
     ["Skills:", "JS, React, Java, C, SQL..."],
@@ -7,7 +8,9 @@ const en = {
     ["Links:"],
   ],
   about: {
+    general: ["General Commands Manual", "NAME"],
     synopsis: [
+      "SYNOPSIS",
       "Hello,",
       "I'm",
       "Denis",
@@ -15,6 +18,7 @@ const en = {
       "I am experienced with developing server-side apps and making responsive websites. I am in touch with newer technology, I love doing research and trying out new software.",
     ],
     overview: [
+      "OVERVIEW",
       "Currently, I'm a ",
       "student at AYBU,",
       "pursuing a degree in ",
@@ -24,6 +28,7 @@ const en = {
       " of studies.",
     ],
     description: [
+      "DESCRIPTION",
       "--i-am-a-tux-fan",
       "I am drawn to Linux-based operating systems and the freedom they provide.",
       "--i-am-a-cinephile",
@@ -35,18 +40,18 @@ const en = {
   skills: [
     [
       "Frontend",
-      "React, Next.js, Tailwind",
+      "React, Next.js",
       "I specialize in using React and Next.js for frontend development. I focus on creating responsive websites which have user-friendly interfaces that adapt seamlessly across devices. I also love working with TailwindCSS and Framer Motion because of the simplicity and effectiveness they provide.",
     ],
     [
       "Backend",
-      "Express.js, ASP.NET, SQL, Auth",
+      "Express.js, ASP.NET, SQL",
       "I specialize in Express.js and have experience with Spring and ASP.NET. My expertise in SQL allows me to efficiently manage and query databases, ensuring seamless data handling. I am also able to implement secure authentication and authorization. Additionally, my passion for C amplifies my ability to optimize code for efficiency.",
     ],
     [
       "General",
       "Linux",
-      "Linux has been pivotal in shaping my programming journey. Embracing the Linux environment not only expanded my technical capabilities but also transformed my approach to problem-solving. Navigating through Linux systems has honed my understanding of computer architecture, file systems, and command-line operations, empowering me to debug and optimize code with a deeper comprehension.",
+      "Linux has been pivotal in shaping my programming journey. Embracing the Linux environment not only expanded my technical capabilities but also transformed my approach to problem-solving. Linux systems has honed my understanding of computer architecture, file systems, and command-line operations, making me able to debug and optimize code with a deeper comprehension.",
     ],
   ],
   projects: [
@@ -62,7 +67,7 @@ const en = {
       desktopFileTitle: "bilinear_scaling",
       title: "Bilinear Scaling",
       description: "Parallel program made in C for image scaling.",
-      url: "https://github.com/denis-the-menace",
+      url: "https://github.com/denis-the-menace/mpi-image-scaling",
     },
     {
       mobileFileTitle: "nvidia_cuda",
@@ -70,7 +75,7 @@ const en = {
       title: "Bilinear Scaling with CUDA",
       description:
         "Parallel program made in C for image scaling using NVIDIA CUDA.",
-      url: "https://github.com/denis-the-menace",
+      url: "https://github.com/denis-the-menace/cuda-image-scaling",
     },
     {
       mobileFileTitle: "chinese_chekers_ai",

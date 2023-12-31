@@ -1,3 +1,4 @@
+import { useLocalization } from "@/components/localization-context";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
@@ -6,16 +7,12 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function TerminalHeader({ pathname }: { pathname: string }) {
   let path = pathname.replace("/", "");
-  let isHome = false;
-  if (path === "") {
-    path = "terminal";
-    isHome = true;
-  }
+  if (path === "") path = "terminal";
 
   return (
     <header className="flex items-center bg-clrsurface">
       <div className="flex justify-center items-center bg-clrpink pr-4 py-1">
-        {isHome ? (
+        {path === "terminal" || path === "projects" ? (
           <Image
             width={24}
             height={24}
@@ -58,6 +55,8 @@ export default function TerminalHeader({ pathname }: { pathname: string }) {
 }
 
 function Dropdown() {
+  const languageContent = useLocalization();
+  const routes = ["home", "about", "skills", "projects"];
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -71,8 +70,8 @@ function Dropdown() {
       </button>
       <AnimatePresence mode="wait">
         {isOpen ? (
-          <div className="absolute top-7 left-6 flex flex-col items-end rounded-lg p-2 w-full">
-            {routeslist.map((route, index) => (
+          <div className="absolute top-[25px] left-6 flex flex-col items-end rounded-lg p-2 w-full">
+            {routes.map((route, index) => (
               <Link href={route === "home" ? "/" : `/${route}`} key={index}>
                 <motion.button
                   key={index}
@@ -82,14 +81,14 @@ function Dropdown() {
                     opacity: 0,
                     transition: {
                       duration: 0.2,
-                      delay: 0.2 * (routeslist.length - index),
+                      delay: 0.2 * (routes.length - index),
                     },
                   }}
                   transition={{ duration: 0.2, delay: 0.2 * index }}
                   onClick={() => setIsOpen(false)}
-                  className="flex w-full justify-between hover:bg-clrpink bg-clrsurface "
+                  className="flex w-full justify-between hover:bg-clrpink bg-clr10 pl-44 pr-2"
                 >
-                  {route}
+                  {languageContent.routesList[index]}
                 </motion.button>
               </Link>
             ))}
@@ -99,5 +98,3 @@ function Dropdown() {
     </nav>
   );
 }
-
-const routeslist = ["home", "about", "skills", "projects"];

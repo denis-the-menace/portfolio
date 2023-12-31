@@ -26,15 +26,19 @@ export default function About() {
     >
       <div className="flex flex-col md:flex-row justify-between">
         <p>DENIS(1)</p>
-        <h1>General Commands Manual</h1>
+        <h1>{languageContent.about.general[0]}</h1>
         <p>DENIS(1)</p>
       </div>
       <div>
-        <h2 className="self-start font-bold text-clr4 md:mb-4">NAME</h2>
+        <h2 className="self-start font-bold text-clr4 md:mb-4">
+          {languageContent.about.general[1]}
+        </h2>
         <p className="md:ml-28">Denis Gercek - web dev</p>
       </div>
       <div>
-        <h2 className="self-start font-bold text-clr4 md:mb-4">SYNOPSIS</h2>
+        <h2 className="self-start font-bold text-clr4 md:mb-4">
+          {languageContent.about.synopsis[0]}
+        </h2>
         <div className="md:ml-28">
           <div className="flex-col justify-center items-center md:mt-4">
             <div className="inline-flex flex-wrap font-bold text-5xl md:text-8xl mb-4">
@@ -44,7 +48,7 @@ export default function About() {
                 exit={{ opacity: 0, transition: { delay: 0 } }}
                 transition={{ delay: 0.5 }}
               >
-                {languageContent.about.synopsis[0]}&nbsp;
+                {languageContent.about.synopsis[1]}&nbsp;
               </motion.h1>
               <motion.h1
                 initial={{ opacity: 0, y: -10 }}
@@ -52,7 +56,7 @@ export default function About() {
                 exit={{ opacity: 0, transition: { delay: 0 } }}
                 transition={{ delay: 1 }}
               >
-                {languageContent.about.synopsis[1]}&nbsp;
+                {languageContent.about.synopsis[2]}&nbsp;
               </motion.h1>
               <motion.h1
                 initial={{ opacity: 0, y: -10 }}
@@ -61,7 +65,7 @@ export default function About() {
                 transition={{ delay: 1.2 }}
                 className="text-clrpink"
               >
-                {languageContent.about.synopsis[2]}
+                {languageContent.about.synopsis[3]}
               </motion.h1>
             </div>
             <motion.h2
@@ -71,7 +75,7 @@ export default function About() {
               transition={{ delay: 1.7 }}
               className="text-3xl md:text-5xl font-bold mb-4"
             >
-              {languageContent.about.synopsis[3]}
+              {languageContent.about.synopsis[4]}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: -10 }}
@@ -80,7 +84,7 @@ export default function About() {
               transition={{ delay: 2 }}
               className="text-2xl md:text-3xl"
             >
-              {languageContent.about.synopsis[4]}
+              {languageContent.about.synopsis[5]}
             </motion.p>
           </div>
         </div>
@@ -89,28 +93,29 @@ export default function About() {
         ref={overviewRef}
         initial={{ opacity: 0, y: -10 }}
         animate={isOverviewInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
-        className="md:ml-28"
       >
-        <h2 className="self-start font-bold text-clr4 md:mb-4">OVERVIEW</h2>
-        <div className="self-start flex flex-col">
+        <h2 className="self-start font-bold text-clr4 md:mb-4">
+          {languageContent.about.overview[0]}
+        </h2>
+        <div className="self-start flex flex-col md:ml-28">
           <div>
-            <span>{languageContent.about.overview[0]}</span>
+            <span>{languageContent.about.overview[1]}</span>
             <span className="font-bold underline decoration-clr7">
-              {languageContent.about.overview[1]}
+              {languageContent.about.overview[2]}
             </span>
           </div>
           <div>
-            <span>{languageContent.about.overview[2]}</span>
+            <span>{languageContent.about.overview[3]}</span>
             <span className="font-bold underline decoration-clr7">
-              {languageContent.about.overview[3]}
+              {languageContent.about.overview[4]}
             </span>
           </div>
           <div>
-            <span>{languageContent.about.overview[4]}</span>
+            <span>{languageContent.about.overview[5]}</span>
             <span className="font-bold underline decoration-clr7">
-              {languageContent.about.overview[5]}
+              {languageContent.about.overview[6]}
             </span>
-            <span>{languageContent.about.overview[6]}</span>
+            <span>{languageContent.about.overview[7]}</span>
           </div>
         </div>
       </motion.div>
@@ -118,21 +123,24 @@ export default function About() {
         ref={descriptionRef}
         initial={{ opacity: 0, y: -10 }}
         animate={isDescriptionInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
-        className="md:ml-28"
       >
-        <h2 className="self-start font-bold text-clr4 md:mb-4">DESCRIPTION</h2>
-        <p className="font-bold text-clr5">
+        <h2 className="self-start font-bold text-clr4 md:mb-4">
           {languageContent.about.description[0]}
+        </h2>
+        <div className="md:ml-28">
+        <p className="font-bold text-clr5">
+          {languageContent.about.description[1]}
         </p>
-        <p className="md:ml-28">{languageContent.about.description[1]}</p>
+        <p className="md:ml-28">{languageContent.about.description[2]}</p>
         <p className="font-bold text-clr5 mt-4">
-          {languageContent.about.description[2]}
+          {languageContent.about.description[3]}
         </p>
-        <p className="md:ml-28">{languageContent.about.description[3]}</p>
+        <p className="md:ml-28">{languageContent.about.description[4]}</p>
         <p className="font-bold text-clr5 mt-4">
-          {languageContent.about.description[4]}
+          {languageContent.about.description[5]}
         </p>
-        <p className="md:ml-28">{languageContent.about.description[5]}</p>
+        <p className="md:ml-28">{languageContent.about.description[6]}</p>
+        </div>
       </motion.div>
     </motion.div>
   );

@@ -192,7 +192,7 @@
 .exit-prompt-container__rerender {
   display: inline;
   color: var(--clr-2);
-  margin-left: 2rem;
+  margin-left: 1rem;
   opacity: 0;
   transition: opacity 0.5s linear;
 }
@@ -200,7 +200,7 @@
 .exit-prompt-container-neofetch__rerender {
   display: inline;
   color: var(--clr-2);
-  margin-left: 2rem;
+  margin-left: 1rem;
   opacity: 0;
   transition: opacity 0.5s linear;
 }

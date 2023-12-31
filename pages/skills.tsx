@@ -19,7 +19,7 @@ export default function Skills() {
           index={0}
           content="os"
           imageSrc="tux.svg"
-          color="bg-red-500 text-clr8"
+          color="bg-clr10 text-clr8"
           isActive={activeIndex === 0}
           onShow={() => setActiveIndex(0)}
         />
@@ -28,7 +28,7 @@ export default function Skills() {
           index={1}
           content="cinema"
           imageSrc="tux.svg"
-          color="bg-red-700 text-clr8"
+          color="bg-clr11 text-clr8"
           isActive={activeIndex === 1}
           onShow={() => setActiveIndex(1)}
         />
@@ -37,7 +37,7 @@ export default function Skills() {
           index={2}
           content="weightlifting"
           imageSrc="tux.svg"
-          color="bg-red-900 text-clr8"
+          color="bg-clr12 text-clr8"
           isActive={activeIndex === 2}
           onShow={() => setActiveIndex(2)}
         />
