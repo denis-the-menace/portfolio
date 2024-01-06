@@ -1,2 +1,0 @@
-terminal-exit-prompt daki go back ve rerender yazilarini locale ekle
-about kismindaki overview desktopda delayli gelmeli ama delayli gelince scroll yapilinca da delay veriyor onu coz
