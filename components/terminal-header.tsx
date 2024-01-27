@@ -80,13 +80,13 @@ function Dropdown() {
                   exit={{
                     opacity: 0,
                     transition: {
-                      duration: 0.2,
-                      delay: 0.2 * (routes.length - index),
+                      duration: 0.15,
+                      delay: 0.15 * (routes.length - index),
                     },
                   }}
-                  transition={{ duration: 0.2, delay: 0.2 * index }}
+                  transition={{ duration: 0.15, delay: 0.15 * index }}
                   onClick={() => setIsOpen(false)}
-                  className="flex w-full justify-between hover:bg-clrpink bg-clr10 pl-44 pr-2"
+                  className="flex w-full justify-between hover:bg-[#3c3b46] bg-[#2b2a34] pl-44 pr-2"
                 >
                   {languageContent.routesList[index]}
                 </motion.button>

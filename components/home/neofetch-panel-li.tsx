@@ -23,7 +23,7 @@ export default function NeofetchPanelLi({
 
   if (index === 3) {
     content = (
-      <Link href="resume.pdf" target="_blank" rel="noopener noreferrer">
+      <Link href={language.cv} target="_blank" rel="noopener noreferrer">
         <span className="text-clrpink font-bold">
           {`${language.neofetchPanel[index][0]} `}
         </span>
@@ -37,7 +37,7 @@ export default function NeofetchPanelLi({
           {`${language.neofetchPanel[index][0]} `}
         </span>
         <Link
-          href="https://github.com/denis-the-menace"
+          href="https://www.linkedin.com/in/denis-ger%C3%A7ek-37a721248/"
           target="_blank"
           rel="noopener noreferrer"
           className="links__icon"

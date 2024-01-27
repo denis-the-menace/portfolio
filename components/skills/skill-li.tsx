@@ -1,5 +1,5 @@
 import { useLocalization } from "@/components/localization-context";
-import { AnimatePresence, MotionConfig, motion } from "framer-motion";
+import { MotionConfig, motion } from "framer-motion";
 import Image from "next/image";
 import useMeasure from "react-use-measure";
 
