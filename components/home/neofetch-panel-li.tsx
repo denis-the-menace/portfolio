@@ -37,7 +37,7 @@ export default function NeofetchPanelLi({
           {`${language.neofetchPanel[index][0]} `}
         </span>
         <Link
-          href="https://www.linkedin.com/in/denis-ger%C3%A7ek-37a721248/"
+          href="https://www.linkedin.com/in/denis-naz%C4%B1m-hikmet-ger%C3%A7ek-37a721248/"
           target="_blank"
           rel="noopener noreferrer"
           className="links__icon"
